@@ -1,0 +1,47 @@
+name: Bootstrap NikaToolFlow storefront
+
+on:
+  push:
+    branches: ["feat/nikatoolflow-storefront"]
+    paths:
+      - ".github/workflows/bootstrap-storefront.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/nikatoolflow-storefront
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Verify and unpack storefront source
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .storefront-payload/part?? > /tmp/storefront.b64
+          echo "efb9bce1c96cb4eed428a98f9f9fe42568164956f7891428aae9ed761eee106d  /tmp/storefront.b64" | sha256sum -c -
+          base64 --decode /tmp/storefront.b64 > /tmp/storefront.tar.xz
+          echo "cc1dfa593076e8d5391d494dfc42022afbb3545f43459bab176efedd467c92f6  /tmp/storefront.tar.xz" | sha256sum -c -
+          tar -xJf /tmp/storefront.tar.xz -C .
+          rm -rf .storefront-payload
+          rm -f .github/workflows/deploy-pages.yml
+
+      - name: Validate source
+        run: npm test
+
+      - name: Commit readable storefront source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: add NikaToolFlow premium storefront"
+          git push origin HEAD:feat/nikatoolflow-storefront
