@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08090d">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="NikaToolFlow is a professional Premiere Pro workflow panel with 35 editing tools, intelligent media workflows, motion helpers, beat detection, and 20-step Nika Undo.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NikaToolFlow — Edit at the speed of thought">
+  <meta property="og:description" content="35 focused tools. One compact Premiere Pro panel. Less friction between the idea and the final cut.">
+  <meta property="og:image" content="assets/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NikaToolFlow — Premiere Pro Workflow Accelerator">
+  <meta name="twitter:description" content="Smart timeline actions, motion, audio, beats, media import, and Nika Undo in one panel.">
+  <meta name="twitter:image" content="assets/og-cover.svg">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>NikaToolFlow — Premiere Pro Workflow Accelerator</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NikaToolFlow",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Windows 10/11, macOS",
+    "softwareVersion": "1.3.1",
+    "description": "A professional workflow toolbar for Adobe Premiere Pro with timeline, motion, audio, marker, beat detection, and media tools.",
+    "author": {"@type": "Person", "name": "Ehsanef"}
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <canvas id="ambientCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-light" aria-hidden="true"></div>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="NikaToolFlow home">
+        <img src="assets/logo.svg" width="38" height="38" alt="">
+        <span class="brand-copy"><strong>NikaToolFlow</strong><small>Premiere workflow accelerator</small></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#features" data-i18n="navFeatures">Features</a>
+        <a href="#workflow" data-i18n="navWorkflow">Workflow</a>
+        <a href="#compatibility" data-i18n="navCompatibility">Compatibility</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="language-toggle" type="button" data-language aria-label="Switch language">
+          <span class="lang-active">EN</span><span class="lang-divider">/</span><span>FA</span>
+        </button>
+        <a class="button button-small button-primary magnetic" href="#pricing" data-cta="nav" data-i18n="navBuy">Get NikaToolFlow</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <span></span><span></span><span></span><span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <a href="#features" data-i18n="navFeatures">Features</a>
+      <a href="#workflow" data-i18n="navWorkflow">Workflow</a>
+      <a href="#compatibility" data-i18n="navCompatibility">Compatibility</a>
+      <a href="#faq" data-i18n="navFaq">FAQ</a>
+      <a href="#pricing" data-i18n="navBuy">Get NikaToolFlow</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="top">
+      <div class="hero-glow glow-one" aria-hidden="true"></div>
+      <div class="hero-glow glow-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow reveal" data-reveal>
+            <span class="pulse-dot"></span>
+            <span data-status-label>Version 1.3.1 · Early access</span>
+          </div>
+          <h1 class="reveal" data-reveal>
+            <span data-i18n="heroLine1">Edit at the</span>
+            <span class="gradient-text" data-i18n="heroLine2">speed of thought.</span>
+          </h1>
+          <p class="hero-lead reveal" data-reveal data-i18n="heroLead">Thirty-five focused tools inside one compact Premiere Pro panel—so your hands stay on the story, not buried in menus.</p>
+          <div class="hero-actions reveal" data-reveal>
+            <a class="button button-primary button-large magnetic" href="#pricing" data-action="primary" data-i18n="heroPrimary">Join early access</a>
+            <button class="button button-ghost button-large" type="button" data-scroll-demo>
+              <span class="play-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 7 8 5-8 5z"/></svg></span>
+              <span data-i18n="heroSecondary">See it in action</span>
+            </button>
+          </div>
+          <div class="hero-foot reveal" data-reveal>
+            <div class="avatar-stack" aria-hidden="true"><span>Pr</span><span>NT</span><span>35</span></div>
+            <p><strong data-i18n="heroFootStrong">Built for editors who move fast.</strong><br><span data-i18n="heroFoot">Windows + macOS · 7-day trial · Device-bound activation</span></p>
+          </div>
+        </div>
+
+        <div class="hero-product reveal" data-reveal data-tilt>
+          <div class="product-aura" aria-hidden="true"></div>
+          <div class="premiere-window">
+            <div class="window-topbar">
+              <div class="window-dots"><span></span><span></span><span></span></div>
+              <div class="project-name">NIKATOOLFLOW_LAUNCH.prproj</div>
+              <div class="window-meta">100%</div>
+            </div>
+            <div class="workspace">
+              <aside class="project-bin" aria-hidden="true">
+                <div class="panel-title"><span>Project</span><b>•••</b></div>
+                <div class="bin-search"></div>
+                <div class="bin-row"><span class="folder-icon"></span><i></i></div>
+                <div class="bin-row"><span class="folder-icon"></span><i></i></div>
+                <div class="bin-row active"><span class="sequence-icon"></span><i></i></div>
+                <div class="bin-thumbs"><span></span><span></span><span></span><span></span></div>
+              </aside>
+
+              <div class="program-area" aria-hidden="true">
+                <div class="program-monitor">
+                  <div class="monitor-image">
+                    <div class="monitor-grid"></div>
+                    <div class="monitor-title"><small>FROM ROUGH CUT TO</small><strong>FLOW STATE</strong></div>
+                    <div class="monitor-flare"></div>
+                  </div>
+                  <div class="monitor-controls"><span>◀</span><span>▶</span><b>00:01:21:14</b><span>◉</span><span>▣</span></div>
+                </div>
+              </div>
+
+              <aside class="ntf-panel" aria-label="NikaToolFlow product interface preview">
+                <div class="ntf-head">
+                  <div class="ntf-brand"><img src="assets/logo.svg" alt="" width="26" height="26"><span><strong>NikaToolFlow</strong><small>by @Ehsanef</small></span></div>
+                  <span class="ntf-gear">⌁</span>
+                </div>
+                <div class="ntf-license"><span></span><b>TRIAL ACTIVE</b><small>7 days</small></div>
+                <div class="ntf-search"><span>⌕</span><em>Search tools…</em><kbd>⌘ K</kbd></div>
+                <div class="ntf-tabs"><b>All</b><span>Quick</span><span>Timeline</span><span>Motion</span></div>
+                <div class="ntf-tools">
+                  <button class="active"><i>↓</i><span>YouTube<br>Grab</span></button>
+                  <button><i>⌘</i><span>Smart<br>Paste</span></button>
+                  <button><i>↗</i><span>Insert at<br>Playhead</span></button>
+                  <button><i>≋</i><span>Auto Beat<br>Detect</span></button>
+                  <button><i>＋</i><span>Zoom<br>In / Out</span></button>
+                  <button><i>◒</i><span>Fade<br>In / Out</span></button>
+                  <button><i>−6</i><span>Audio<br>Level</span></button>
+                  <button><i>◆</i><span>Marker at<br>Playhead</span></button>
+                  <button><i>↶</i><span>Nika<br>Undo</span></button>
+                </div>
+                <div class="ntf-footer"><span>Ready</span><b>Nika Undo · 3</b></div>
+              </aside>
+
+              <div class="timeline" aria-hidden="true">
+                <div class="timeline-tabs"><span>Sequence 01</span><span>Assembly</span><span class="timeline-time">00:01:21:14</span></div>
+                <div class="time-ruler"><i>01:20:00</i><i>01:21:00</i><i>01:22:00</i><i>01:23:00</i></div>
+                <div class="tracks">
+                  <div class="track-labels"><span>V2</span><span>V1</span><span>A1</span><span>A2</span></div>
+                  <div class="track-content">
+                    <div class="track-row"><div class="clip purple c1">B-ROLL_04</div><div class="clip cyan c2">TEXT_ANIM</div></div>
+                    <div class="track-row"><div class="clip blue c3">A001_C012</div><div class="clip violet c4">A001_C013</div><div class="clip purple c5">A001_C014</div></div>
+                    <div class="track-row audio"><div class="clip green a1"><span class="wave"></span></div><div class="clip green a2"><span class="wave"></span></div></div>
+                    <div class="track-row audio"><div class="clip teal a3"><span class="wave"></span></div></div>
+                    <div class="playhead"><span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-chip chip-top"><span class="chip-icon">≋</span><span><b>128 BPM</b><small>Beat markers placed</small></span></div>
+          <div class="floating-chip chip-bottom"><span class="chip-icon">↶</span><span><b>20-step history</b><small>Nika Undo</small></span></div>
+        </div>
+      </div>
+
+      <div class="container stats-rail reveal" data-reveal>
+        <div><strong data-count="35">35</strong><span data-i18n="statTools">focused tools</span></div>
+        <div><strong data-count="20">20</strong><span data-i18n="statUndo">undo steps</span></div>
+        <div><strong data-count="7">7</strong><span data-i18n="statTrial">day trial</span></div>
+        <div><strong>2020–26</strong><span data-i18n="statPremiere">Premiere editions</span></div>
+      </div>
+    </section>
+
+    <section class="marquee-section" aria-label="Feature highlights">
+      <div class="marquee-track">
+        <span>SMART PASTE</span><i>✦</i><span>YOUTUBE GRAB</span><i>✦</i><span>AUTO BEAT DETECT</span><i>✦</i><span>MOTION KEYFRAMES</span><i>✦</i><span>NIKA UNDO</span><i>✦</i><span>AUDIO TOOLS</span><i>✦</i>
+        <span>SMART PASTE</span><i>✦</i><span>YOUTUBE GRAB</span><i>✦</i><span>AUTO BEAT DETECT</span><i>✦</i><span>MOTION KEYFRAMES</span><i>✦</i><span>NIKA UNDO</span><i>✦</i><span>AUDIO TOOLS</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="section problem-section">
+      <div class="container problem-grid">
+        <div class="section-copy reveal" data-reveal>
+          <span class="section-kicker" data-i18n="problemKicker">Your edit deserves momentum</span>
+          <h2 data-i18n="problemTitle">The timeline should feel like an instrument—not a maze.</h2>
+        </div>
+        <div class="problem-copy reveal" data-reveal>
+          <p data-i18n="problemBody">Repetitive dialogs, buried commands, manual beat marking, and constant panel switching quietly steal hours from every project. NikaToolFlow compresses those actions into a fast, searchable control surface that docks beside your timeline.</p>
+          <div class="before-after">
+            <div><span class="state-dot before"></span><strong data-i18n="beforeLabel">Before</strong><p data-i18n="beforeText">Menu hunting, repeated setup, broken focus.</p></div>
+            <div><span class="state-dot after"></span><strong data-i18n="afterLabel">With Nika</strong><p data-i18n="afterText">One panel, consistent actions, creative flow.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-heading centered reveal" data-reveal>
+          <span class="section-kicker" data-i18n="featuresKicker">One panel. Every editing rhythm.</span>
+          <h2 data-i18n="featuresTitle">Built around the moments that slow editors down.</h2>
+          <p data-i18n="featuresLead">From acquiring a clip to landing motion, audio, and markers, each tool is designed to remove a small interruption—and protect your momentum.</p>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card bento-youtube reveal" data-reveal data-tilt>
+            <div class="card-copy">
+              <span class="feature-number">01</span>
+              <h3 data-i18n="ytTitle">YouTube Grab, directly into the cut.</h3>
+              <p data-i18n="ytBody">Analyze an authorized link, choose quality, pull a full video or exact IN/OUT range, convert to a Premiere-safe format, import, and place at the playhead.</p>
+              <div class="tag-row"><span>Clip Range</span><span>H.264 / AAC</span><span>Project Import</span></div>
+            </div>
+            <div class="youtube-visual" aria-hidden="true">
+              <div class="yt-window">
+                <div class="yt-url"><span>▶</span><i>youtube.com/watch?v=...</i><b>Analyze</b></div>
+                <div class="yt-preview"><div class="yt-thumbnail"><span>00:10</span></div><div><strong>Brand Film — Final Cut</strong><small>4K · 02:18</small></div></div>
+                <div class="range-control"><div class="range-line"><span></span><span></span><i></i></div><div><b>00:30</b><b>00:40</b></div></div>
+                <button>GRAB TO PREMIERE <span>↗</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="bento-card bento-beats reveal" data-reveal data-tilt>
+            <div class="beat-visual" aria-hidden="true">
+              <div class="bpm-orbit"><span>128<small>BPM</small></span><i></i><i></i><i></i></div>
+              <div class="beat-wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="card-copy">
+              <span class="feature-number">02</span>
+              <h3 data-i18n="beatTitle">Real beat detection. Markers that move with music.</h3>
+              <p data-i18n="beatBody">Detect BPM and transients from one selected music clip, then place source markers that remain attached when the clip moves.</p>
+            </div>
+          </article>
+
+          <article class="bento-card bento-undo reveal" data-reveal data-tilt>
+            <div class="card-copy">
+              <span class="feature-number">03</span>
+              <h3 data-i18n="undoTitle">A safety net made for panel actions.</h3>
+              <p data-i18n="undoBody">Nika Undo keeps a 20-step history for supported tools and works with Ctrl/Cmd+Z while the panel has focus.</p>
+            </div>
+            <div class="undo-stack" aria-hidden="true"><span>Audio Fade</span><span>Zoom 100 → 110</span><span>Beat Markers</span><span>Batch Rename</span><b>↶ Nika Undo · 4</b></div>
+          </article>
+
+          <article class="bento-card bento-motion reveal" data-reveal data-tilt>
+            <div class="motion-graph" aria-hidden="true">
+              <div class="graph-grid"></div>
+              <svg viewBox="0 0 420 190" preserveAspectRatio="none"><path class="graph-line" d="M12 162 C92 160 100 146 142 105 S225 24 310 27 S374 48 408 19"/><circle cx="12" cy="162" r="5"/><circle cx="142" cy="105" r="5"/><circle cx="310" cy="27" r="5"/><circle cx="408" cy="19" r="5"/></svg>
+              <div class="graph-label start">100%</div><div class="graph-label end">110%</div>
+            </div>
+            <div class="card-copy">
+              <span class="feature-number">04</span>
+              <h3 data-i18n="motionTitle">Motion that lands on the real clip boundaries.</h3>
+              <p data-i18n="motionBody">Create full-clip zooms, punch-ins, fades, and audio transitions with source-relative keyframes—even on trimmed or reverse-speed clips.</p>
+            </div>
+          </article>
+
+          <article class="bento-card bento-smart reveal" data-reveal data-tilt>
+            <div class="card-copy">
+              <span class="feature-number">05</span>
+              <h3 data-i18n="smartTitle">Paste media, not problems.</h3>
+              <p data-i18n="smartBody">Smart Paste turns copied files, clipboard images, and direct media URLs into durable project assets instead of fragile temporary files.</p>
+            </div>
+            <div class="smart-flow" aria-hidden="true"><span>CLIPBOARD</span><i>→</i><span>SAFE MEDIA</span><i>→</i><span>PREMIERE</span></div>
+          </article>
+
+          <article class="bento-card bento-panel reveal" data-reveal data-tilt>
+            <div class="mini-panel" aria-hidden="true">
+              <div class="mini-head"><b>N</b><span>NikaToolFlow</span><i>⚙</i></div>
+              <div class="mini-search"></div>
+              <div class="mini-grid"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="card-copy">
+              <span class="feature-number">06</span>
+              <h3 data-i18n="panelTitle">Compact when you need space. Searchable when you need speed.</h3>
+              <p data-i18n="panelBody">Dock it, resize it, switch language and accent, hide experimental tools, and find any action in seconds.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section explorer-section" id="workflow">
+      <div class="container explorer-grid">
+        <div class="explorer-copy reveal" data-reveal>
+          <span class="section-kicker" data-i18n="explorerKicker">Explore the toolkit</span>
+          <h2 data-i18n="explorerTitle">A focused toolset for every phase of the edit.</h2>
+          <p data-i18n="explorerLead">Choose a category to see how NikaToolFlow turns repetitive Premiere actions into quick, predictable workflows.</p>
+          <div class="explorer-tabs" role="tablist" aria-label="Tool categories">
+            <button role="tab" aria-selected="true" data-feature-tab="quick"><span>01</span><b data-i18n="tabQuick">Quick</b></button>
+            <button role="tab" aria-selected="false" data-feature-tab="timeline"><span>02</span><b data-i18n="tabTimeline">Timeline</b></button>
+            <button role="tab" aria-selected="false" data-feature-tab="motion"><span>03</span><b data-i18n="tabMotion">Motion</b></button>
+            <button role="tab" aria-selected="false" data-feature-tab="audio"><span>04</span><b data-i18n="tabAudio">Audio</b></button>
+            <button role="tab" aria-selected="false" data-feature-tab="markers"><span>05</span><b data-i18n="tabMarkers">Markers</b></button>
+          </div>
+        </div>
+
+        <div class="explorer-stage reveal" data-reveal>
+          <div class="stage-top"><span data-feature-label>QUICK WORKFLOW</span><b><i></i> NikaToolFlow 1.3.1</b></div>
+          <div class="stage-content" data-feature-content>
+            <div class="stage-icon">↗</div>
+            <span class="stage-kicker">7 actions</span>
+            <h3>Get media from idea to timeline—faster.</h3>
+            <p>Smart Paste, YouTube Grab, Import Media, Insert at Playhead, Adjustment Layer, Nest, and Duplicate keep acquisition and assembly inside one panel.</p>
+            <ul><li>Authorized full-video and exact clip-range acquisition</li><li>Premiere-safe conversion and project import</li><li>Reusable adjustment layer placement with overwrite protection</li></ul>
+          </div>
+          <div class="stage-tools" data-feature-tools>
+            <span>Smart Paste</span><span>YouTube Grab</span><span>Import Media</span><span>Insert at Playhead</span><span>Adjustment Layer</span><span>Nest</span><span>Duplicate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow-section">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal>
+          <span class="section-kicker" data-i18n="flowKicker">From interruption to flow</span>
+          <h2 data-i18n="flowTitle">Three moves. One uninterrupted edit.</h2>
+        </div>
+        <div class="workflow-steps">
+          <article class="workflow-step reveal" data-reveal><span class="step-index">01</span><div class="step-icon">⌕</div><h3 data-i18n="flow1Title">Find the action</h3><p data-i18n="flow1Body">Search, filter by category, or keep the panel in compact mode beside your timeline.</p></article>
+          <div class="step-connector" aria-hidden="true"><span></span></div>
+          <article class="workflow-step reveal" data-reveal><span class="step-index">02</span><div class="step-icon">↗</div><h3 data-i18n="flow2Title">Run with context</h3><p data-i18n="flow2Body">NikaToolFlow reads your selection, asks only for the parameters it needs, and acts in place.</p></article>
+          <div class="step-connector" aria-hidden="true"><span></span></div>
+          <article class="workflow-step reveal" data-reveal><span class="step-index">03</span><div class="step-icon">↶</div><h3 data-i18n="flow3Title">Stay reversible</h3><p data-i18n="flow3Body">Supported actions enter a 20-step Nika Undo history, keeping experimentation safe.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compatibility-section" id="compatibility">
+      <div class="container compatibility-card reveal" data-reveal>
+        <div class="compatibility-copy">
+          <span class="section-kicker" data-i18n="compatKicker">Direct-install CEP edition</span>
+          <h2 data-i18n="compatTitle">Made to fit the Premiere setups editors already use.</h2>
+          <p data-i18n="compatBody">NikaToolFlow 1.3.1 targets Premiere Pro 2020–2026 on Windows 10/11 and macOS. Exact builds should be confirmed in the published test matrix before purchase.</p>
+          <div class="compatibility-badges"><span><b>Pr</b> Premiere Pro</span><span><b>⊞</b> Windows 10/11</span><span><b>●</b> macOS</span><span><b>EN</b> English UI recommended</span></div>
+          <p class="compatibility-note"><span>i</span><span data-i18n="compatNote">Experimental QE-based tools are optional, hidden by default, and clearly separated from guaranteed core functionality.</span></p>
+        </div>
+        <div class="version-stack" aria-hidden="true">
+          <div class="version-card v2026"><span>2026</span><b>Premiere Pro</b><small>26.x</small></div>
+          <div class="version-card v2025"><span>2025</span><b>Premiere Pro</b><small>25.x</small></div>
+          <div class="version-card v2024"><span>2024</span><b>Premiere Pro</b><small>24.x</small></div>
+          <div class="version-card v2020"><span>2020+</span><b>Legacy CEP</b><small>14.x+</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing">
+      <div class="container pricing-grid">
+        <div class="pricing-copy reveal" data-reveal>
+          <span class="section-kicker" data-i18n="pricingKicker">Keep the tool. Keep the momentum.</span>
+          <h2 data-i18n="pricingTitle">One focused panel for years of faster edits.</h2>
+          <p data-i18n="pricingLead">Start with the included seven-day trial. Upgrade when NikaToolFlow earns its place in your workspace.</p>
+          <div class="value-list">
+            <div><span>✓</span><p><strong data-i18n="value1Title">35 workflow tools</strong><small data-i18n="value1Body">Quick, timeline, motion, audio, markers, and utilities.</small></p></div>
+            <div><span>✓</span><p><strong data-i18n="value2Title">Device-bound license</strong><small data-i18n="value2Body">Signed offline activation for one licensed workstation.</small></p></div>
+            <div><span>✓</span><p><strong data-i18n="value3Title">Updates for this CEP edition</strong><small data-i18n="value3Body">Maintenance releases and installation improvements.</small></p></div>
+            <div><span>✓</span><p><strong data-i18n="value4Title">English + Persian interface</strong><small data-i18n="value4Body">Choose the language that keeps you moving.</small></p></div>
+          </div>
+        </div>
+
+        <article class="price-card reveal" data-reveal data-tilt>
+          <div class="price-ribbon" data-status-ribbon>EARLY ACCESS</div>
+          <div class="price-head"><img src="assets/logo.svg" width="52" height="52" alt=""><div><strong>NikaToolFlow</strong><small>Lifetime workstation license</small></div></div>
+          <div class="price-display"><span class="price-prefix" data-i18n="priceFrom">Launch</span><strong data-price>Pricing</strong><small data-compare-price hidden></small></div>
+          <p class="price-description" data-i18n="priceDescription">The storefront is ready. Public checkout opens after the advertised Premiere/OS test matrix is complete.</p>
+          <button class="button button-primary button-full magnetic" type="button" data-action="purchase" data-i18n="priceButton">Request early access</button>
+          <button class="button button-ghost button-full" type="button" data-action="trial" data-i18n="trialButton">Start 7-day trial</button>
+          <div class="secure-row"><span>◇</span><span data-i18n="secureText">Secure hosted checkout · Digital delivery · Activation guide</span></div>
+          <div class="price-meta"><span><b>1</b><small data-i18n="metaDevice">device</small></span><span><b>7</b><small data-i18n="metaTrial">trial days</small></span><span><b>1.3.1</b><small data-i18n="metaVersion">version</small></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-heading reveal" data-reveal><span class="section-kicker" data-i18n="faqKicker">Questions, answered</span><h2 data-i18n="faqTitle">Everything you need before installing.</h2><p data-i18n="faqLead">Still need help? The support address can be configured in one line before launch.</p></div>
+        <div class="faq-list reveal" data-reveal>
+          <details><summary><span data-i18n="faq1Q">Which Premiere versions are supported?</span><i></i></summary><div data-i18n="faq1A">The CEP edition targets Premiere Pro 2020 through 2026. Because native commands can vary by build, OS, focus, and UI language, only exact combinations listed in the published test matrix should be treated as guaranteed.</div></details>
+          <details><summary><span data-i18n="faq2Q">How does the seven-day trial work?</span><i></i></summary><div data-i18n="faq2A">Install the customer package, open NikaToolFlow from Window → Extensions, and select “Start 7-day trial.” Trial state remains on the workstation across Premiere restarts.</div></details>
+          <details><summary><span data-i18n="faq3Q">How is a paid license activated?</span><i></i></summary><div data-i18n="faq3A">NikaToolFlow displays a Device ID. The seller issues a signed license for that workstation, and you paste it into the activation window. The current edition supports offline verification.</div></details>
+          <details><summary><span data-i18n="faq4Q">Does YouTube Grab bypass restrictions?</span><i></i></summary><div data-i18n="faq4A">No. It is intended only for media you own, have permission to use, or are otherwise authorized to download. It does not bypass DRM or access controls.</div></details>
+          <details><summary><span data-i18n="faq5Q">What happens to imported clipboard images?</span><i></i></summary><div data-i18n="faq5A">Smart Paste stores clipboard images and direct URL media in a durable NikaToolFlow folder instead of an operating-system temp folder, helping prevent offline media later.</div></details>
+          <details><summary><span data-i18n="faq6Q">Are experimental tools included?</span><i></i></summary><div data-i18n="faq6A">Optional experimental tools are included but hidden by default. Some use Premiere’s unsupported QE DOM and should be tested on a duplicate project before production use.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section">
+      <div class="container final-card reveal" data-reveal>
+        <div class="final-orb" aria-hidden="true"></div>
+        <div class="final-copy"><span class="section-kicker" data-i18n="finalKicker">Less friction. More finished work.</span><h2 data-i18n="finalTitle">Make Premiere feel built around your hands.</h2><p data-i18n="finalBody">Bring your most repeated actions into one precise, compact, reversible workflow.</p></div>
+        <a href="#pricing" class="button button-light button-large magnetic" data-action="primary" data-i18n="finalButton">Get NikaToolFlow</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="brand" href="#top"><img src="assets/logo.svg" width="38" height="38" alt=""><span class="brand-copy"><strong>NikaToolFlow</strong><small>by @Ehsanef</small></span></a><p data-i18n="footerTagline">A professional Premiere Pro workflow panel for editors who value speed and control.</p></div>
+      <div class="footer-links"><div><strong data-i18n="footerProduct">Product</strong><a href="#features" data-i18n="navFeatures">Features</a><a href="#compatibility" data-i18n="navCompatibility">Compatibility</a><a href="#pricing" data-i18n="footerPricing">Pricing</a></div><div><strong data-i18n="footerSupport">Support</strong><a href="#faq">FAQ</a><a href="legal.html#installation" data-i18n="footerInstall">Installation</a><a href="legal.html#support" data-i18n="footerContact">Contact</a></div><div><strong data-i18n="footerLegal">Legal</strong><a href="legal.html#terms" data-i18n="footerTerms">Terms</a><a href="legal.html#privacy" data-i18n="footerPrivacy">Privacy</a><a href="legal.html#refunds" data-i18n="footerRefunds">Refund policy</a></div></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span data-year></span> NikaToolFlow. <span data-i18n="footerRights">All rights reserved.</span></span><span data-i18n="footerAdobe">Adobe and Premiere Pro are trademarks of Adobe. NikaToolFlow is an independent product.</span></div>
+  </footer>
+
+  <dialog class="action-modal" data-action-modal>
+    <button class="modal-close" type="button" data-modal-close aria-label="Close">×</button>
+    <div class="modal-icon"><img src="assets/logo.svg" width="54" height="54" alt=""></div>
+    <span class="section-kicker" data-modal-kicker>EARLY ACCESS</span>
+    <h2 data-modal-title>NikaToolFlow is preparing for launch.</h2>
+    <p data-modal-body>The site and product flow are ready. Checkout will be enabled after the advertised Premiere test matrix is complete.</p>
+    <div class="modal-actions">
+      <a class="button button-primary button-full" href="#" data-modal-primary>Contact for early access</a>
+      <button class="button button-ghost button-full" type="button" data-modal-close data-i18n="modalBack">Back to site</button>
+    </div>
+  </dialog>
+
+  <script src="site.config.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

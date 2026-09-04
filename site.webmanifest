@@ -1,0 +1,17 @@
+{
+  "name": "NikaToolFlow",
+  "short_name": "NikaToolFlow",
+  "description": "A professional Premiere Pro workflow accelerator.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07080c",
+  "theme_color": "#08090d",
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

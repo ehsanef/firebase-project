@@ -1,0 +1,26 @@
+# Dependencies and local tooling
+node_modules/
+_site/
+.DS_Store
+Thumbs.db
+.firebase/
+.firebaserc
+
+# Local previews and archives
+preview-*.png
+*.zip
+*.7z
+*.rar
+
+# Secrets and seller-only product material
+.env
+.env.*
+*.pem
+*.key
+seller-tools/
+**/seller-tools/**
+*Source-and-Seller*
+*NikaToolFlow-Customer*
+*customer-license*
+*issued-license*
+*device-id*
